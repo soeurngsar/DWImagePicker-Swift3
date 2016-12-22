@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = “DWImagePicker-Swift3“
+  s.name = “WDImagePicker-Swift3“
   s.version = “1.0”
   s.summary = "Image picker with custom crop rect for iOS written in Swift (Ported over from GKImagePicker)"
   s.description = "With WDImagePicker and just 4 lines of code, you can set your custom crop area for UIImagePickerController. If you don't set it, it uses the same crop area as the default UIImagePickerController."
