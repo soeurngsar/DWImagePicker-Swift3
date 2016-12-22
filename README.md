@@ -9,7 +9,7 @@ Ever wanted a custom crop area for the UIImagePickerController? Now you can have
 ```ruby
 use_frameworks!
 
-pod 'WDImagePicker', :git => 'https://github.com/justwudi/WDImagePicker.git', :tag => '0.2.2'
+pod 'WDImagePicker', :git => 'https://github.com/soeurngsar/DWImagePicker-Swift3.git', :tag => '1.0'
 ```
 and run `pod install`
 
