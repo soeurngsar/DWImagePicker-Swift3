@@ -77,8 +77,11 @@ class WDImageCropViewController: UIViewController {
         self.imageCropView = WDImageCropView(frame: self.view.bounds)
         self.imageCropView.imageToCrop = sourceImage
         self.imageCropView.resizableCropArea = self.resizableCropArea
+        
+        //get the height of image and update crop size
         let imageheight = sourceImage.size.height * (cropSize.width/sourceImage.size.width)
         self.imageCropView.cropSize = CGSize(width: cropSize.width, height: imageheight)
+        
         self.view.addSubview(self.imageCropView)
     }
 
