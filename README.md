@@ -1,6 +1,6 @@
 WDImagePicker-Swift3
 =============
-Ever wanted a custom crop area for the UIImagePickerController? Now you can have it with _WDImagePicker_. Just set your custom crop area and that's it. Just 4 lines of code. If you don't set it, it uses the same crop area as the default UIImagePickerController.
+This is extension to DWImagePicker-Swift3 at https://github.com/soeurngsar/DWImagePicker-Swift3.git . The crop area comes around the image now. 
 
 ### Installation
 
@@ -9,7 +9,7 @@ Ever wanted a custom crop area for the UIImagePickerController? Now you can have
 ```ruby
 use_frameworks!
 
-pod 'DWImagePicker-Swift3', :git => 'https://github.com/soeurngsar/DWImagePicker-Swift3.git', :branch => "master"
+pod 'DWImagePicker-Swift3', :git => 'https://github.com/Dexter7677/DWImagePicker-Swift3.git', :branch => "master"
 ```
 and run `pod install`
 
