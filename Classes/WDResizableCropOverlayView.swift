@@ -20,7 +20,8 @@ internal class WDResizableCropOverlayView: WDImageCropOverlayView {
 
     var contentView: UIView!
     var cropBorderView: WDCropBorderView!
-
+    var originalImageFrame : CGRect!
+    
     private var initialContentSize = CGSize(width: 0, height: 0)
     private var resizingEnabled: Bool!
     private var anchor: CGPoint!
@@ -109,6 +110,8 @@ internal class WDResizableCropOverlayView: WDImageCropOverlayView {
             y:(height - toolbarSize - initialContentSize.height) / 2 - kBorderCorrectionValue,
             width:initialContentSize.width + kBorderCorrectionValue * 2,
             height:initialContentSize.height + kBorderCorrectionValue * 2))
+        
+        originalImageFrame = cropBorderView?.frame
         self.addSubview(cropBorderView)
     }
 
@@ -175,7 +178,10 @@ internal class WDResizableCropOverlayView: WDImageCropOverlayView {
             width:cropBorderView.frame.size.width + widthChange,
             height:cropBorderView.frame.size.height + heightChange)
         newFrame = self.preventBorderFrameFromGettingTooSmallOrTooBig(frame: newFrame)
+        if self.originalImageFrame.contains(newFrame){
         self.resetFrame(to: newFrame)
+        }
+        
         startPoint = CGPoint(x:pointX, y:pointY)
     }
 
